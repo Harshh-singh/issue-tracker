@@ -1,0 +1,9 @@
+#layout-main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #20206b, #550080);
+}
+#layout-main ul {
+  list-style: none;
+}

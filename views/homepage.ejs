@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/homepage.css">
+
+<div id="homepage">
+    <ul>
+        <% for(let i of project_List){%>
+    
+            <li>
+                <div id="projectdetails">
+                    
+                    <div id="projectname">
+                        <h1>
+                            <%= i.projectName%>
+                        </h1>
+                       
+                    </div>
+                
+                    <div id="description">
+                        <%= i.description%>
+                    </div>
+    
+                    <div id="authorname">
+                        <%= i.authorName%>
+                    </div>
+    
+                
+                </div>
+                
+            </li>
+    
+        <%}%>
+    </ul>
+</div>

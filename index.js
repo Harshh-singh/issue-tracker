@@ -1,9 +1,20 @@
 const express = require('express');
+const fs = require('fs');
 const path = require('path');
 const port = 9000;
 const expressLayouts = require('express-ejs-layouts');
+const db = require('./config/mongoose');
+
+const Project = require('./models/project_schema');
+
+let project_List = [];
 
 const app = express();
+
+app.use(express.urlencoded());
+
+app.use(express.static('assets'));
+
 
 app.use(expressLayouts);
 
@@ -11,11 +22,9 @@ app.use(expressLayouts);
 app.set('layout extractStyles' , true);
 app.set('layout extractScripts' , true);
 
+
 app.set('view engine' , 'ejs');
 app.set('views', './views');
-
-app.use(express.urlencoded());
-app.use(express.static('assets'));
 
 
 app.use('/', require('./routes/index'));

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/createproject.css">
+
+<div id="create-form">
+   
+    <form action="/project/newproject" id="create-project-form" method="post">
+        <label for="name">Project Name</label>
+        <input type="text" name="projectName" id="name"  placeholder="Name for your project">
+
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="5" placeholder="Tell us about your project..."></textarea>
+       
+        <label for="author">Author Name</label>
+        <input type="text" name="author" id="author" placeholder="Name">
+
+        <button type="submit">Create Project</button>
+    </form>
+</div>
