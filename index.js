@@ -7,13 +7,16 @@ const db = require('./config/mongoose');
 
 const Project = require('./models/project_schema');
 
+const Issue = require('./models/issue_schema');
+
 let project_List = [];
+
 
 const app = express();
 
 app.use(express.urlencoded());
 
-app.use(express.static('assets'));
+app.use(express.static('./assets'));
 
 
 app.use(expressLayouts);

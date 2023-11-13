@@ -3,7 +3,8 @@ $SecondaryColor: rgba(255, 255, 255, 0.167);
 $placeholder-Color: #ffffff6d;
 $Text-Color: #ffffff;
 
-#create-form{
+
+#create-issue{
     label{
         margin-right: 10vw;
     }
@@ -37,8 +38,7 @@ $Text-Color: #ffffff;
     }
 
     textarea::placeholder{
-        color: $placeholder-Color
-        ;
+        color: $placeholder-Color;
     }
 
     margin-top: 4vh;

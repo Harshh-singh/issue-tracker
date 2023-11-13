@@ -1,19 +1,29 @@
+$Header-Background: #2b2d42 ;
+
 body{
     margin: 0%;
     main{
         a{
             text-decoration: none;
-            color: white;
+            color:  #ffffff ;
+        }
+
+        #createbtn{
+            margin: 30px 0px 5px 0px;
+            height: 40px;
+            border-radius: 2%;
+            border: none;
         }
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: #ffffff ;
     padding: 0px 15px 0px 10px;
     display: flex;
     text-align: center;
     height: 12%;
     text-align: center;
-    background-color: #20206b;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.114);
+    background-color: $Header-Background;
+    border-bottom: 1px solid  #bfc0c0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 }

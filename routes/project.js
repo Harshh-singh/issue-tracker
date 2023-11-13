@@ -7,6 +7,11 @@ router.get('/create', projectcontroller.create);
 
 router.post('/newproject', projectcontroller.newproject);
 
+router.get('/details' , projectcontroller.details);
+
+router.get('/createissue', projectcontroller.createissue);
+
+router.post('/newbug', projectcontroller.newIssue);
 
 
 module.exports = router;

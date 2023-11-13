@@ -1,4 +1,4 @@
-#create-form {
+#create-issue {
   margin-top: 4vh;
   background: #3d5a80;
   height: 58%;
@@ -9,10 +9,10 @@
   padding: 25px;
   border-radius: 2%;
 }
-#create-form label {
+#create-issue label {
   margin-right: 10vw;
 }
-#create-form button {
+#create-issue button {
   margin-top: 5vh;
   height: 4vh;
   width: 16vw;
@@ -21,14 +21,14 @@
   border-radius: 3%;
   color: #ffffff;
 }
-#create-form input {
+#create-issue input {
   height: 4vh;
   width: 16vw;
 }
-#create-form input, #create-form textarea:focus {
+#create-issue input, #create-issue textarea:focus {
   border: none;
 }
-#create-form input, #create-form textarea {
+#create-issue input, #create-issue textarea {
   margin: 5px 0px 20px 0px;
   display: block;
   background: rgba(255, 255, 255, 0.167);
@@ -37,9 +37,9 @@
   border-radius: 3%;
   color: #ffffff;
 }
-#create-form input::placeholder {
+#create-issue input::placeholder {
   color: rgba(255, 255, 255, 0.4274509804);
 }
-#create-form textarea::placeholder {
+#create-issue textarea::placeholder {
   color: rgba(255, 255, 255, 0.4274509804);
 }

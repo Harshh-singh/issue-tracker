@@ -1,0 +1,35 @@
+$Primary-Color: #3d5a80;
+$SecondaryColor: rgba(255, 255, 255, 0.167);
+$Text-Color: #ffffff;
+
+#projectdetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vh 2vw 0vh 2vw;
+    height: 50%;
+    border: 1px solid white;
+    background: $Primary-Color; 
+    border-radius: 2%;
+    margin: 20px;
+    width: 60%;
+  
+    #createissuebtn{
+        padding: 4px 0px 4px 0px;
+        width: 30%;
+        border: 2px solid;
+        background: $SecondaryColor;
+        border-radius: 2%;
+        margin-bottom: 4vh;
+    }
+    #bugs{
+        padding: 5px 0px 0px 5px;
+        border: 2px solid white;
+        height: 40%;
+        width: 80%;
+        background: $SecondaryColor;
+        backdrop-filter: blur(10px); 
+        border-radius: 2%;
+    }
+}
