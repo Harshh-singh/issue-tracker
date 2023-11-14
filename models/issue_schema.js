@@ -2,20 +2,24 @@ const mongoose = require('mongoose');
 
 const issueschema = new mongoose.Schema({
 
-    issue_title:{
+    issue_title: {
         type:String,
-        require:true
+        required:true
     },
     issue_description:{
         type: String,
-        require: true
+        required: true
     },
     issue_authorName:{
         type: String,
-        require: true
+        required: true
+    },
+    project_id:{
+        type: String,
+        required: true
     },
 });
 
-const Issue = mongoose.model('issue', issueschema);
+const Issue = mongoose.model('Issue', issueschema);
 
 module.exports = Issue;

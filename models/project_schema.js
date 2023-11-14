@@ -7,12 +7,16 @@ const projectschema = new mongoose.Schema({
     },
     description:{
         type: String,
-        require: true
+        required: true
     },
     authorName:{
         type: String,
-        require: true
+        required: true
     },
+    issue: [ {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Issue',
+    } ]
 });
 
 const Project = mongoose.model('Project', projectschema);

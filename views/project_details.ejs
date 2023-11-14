@@ -10,19 +10,40 @@
         <%= project_details.description %>
     </div>
 
-    
-    <div id="bugs">
-        <h1>
-            No Bugs
-            <i class="fa-solid fa-bug-slash"></i>
-        </h1>
-       
 
-    </div>
+            <div id="bugs">
+
+                <% if(project_details.issue && project_details.issue.length>0) {%>
+                    
+                    <h2>
+                       Bug found 
+                       <i class="fa-solid fa-bug"></i>
+                    </h2>
+                    <div id="bug-details">
+            
+                        <h3>
+                                <%=project_details.issue[0]%>
+                        </h3>
+                   
+                         
+                           
+                    </div>
+                    <% }else{ %>
+                        
+                        <h1>
+                            No Bugs 
+                            <i class="fa-solid fa-bug-slash"></i>
+        
+                        </h1>
+                        <% } %>
+                       
+                
+        
+            </div>
    
 
     <div id="createissuebtn">
-        <a href="/project/createissue">
+        <a href="/project/createissue/?id=<%= project_id %>&type=Get">
             <div>
                 Create Issue
                 <i class="fa-solid fa-plus"></i> 
