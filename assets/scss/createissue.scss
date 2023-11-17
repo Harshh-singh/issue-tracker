@@ -17,6 +17,10 @@ $Text-Color: #ffffff;
         border-radius: 3%;
         color: $Text-Color;
     }
+    button:hover{
+        transform: scale(1.05);
+        transition: transform 0.6s ease-in-out;
+    }
     input{
         height: 4vh;
         width: 16vw;
@@ -50,5 +54,5 @@ $Text-Color: #ffffff;
     justify-content: center;
     padding: 25px;
     border-radius: 2%;
-   
+    box-shadow: 0px 0px 10px 3px grey;
 }

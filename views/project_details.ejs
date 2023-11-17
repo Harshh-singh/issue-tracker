@@ -21,9 +21,23 @@
                     </h2>
                     <div id="bug-details">
             
-                        <h3>
-                                <%=project_details.issue[0]%>
-                        </h3>
+                        <% for(let bug of project_details.issue){%>
+                            
+                            
+                            <div id="issuedetails"></div>
+                            <h3>
+                                <%= bug.issue_title %>
+                            </h3>
+                            <p>
+                                <%= bug.issue_description %>
+                            </p>
+                            <p>
+                                <%= bug.issue_authorName %>
+                            </p>
+         
+                            <%}%>
+
+                      
                    
                          
                            
@@ -49,11 +63,7 @@
                 <i class="fa-solid fa-plus"></i> 
             </div>
                          
-
         </a>
        
     </div>
 </div>
-    
-    
-    

@@ -43,7 +43,7 @@ module.exports.details = async function(req,res){
 
     const projectid = req.query.id;
 
-    const project = await Project.findById(projectid);
+    const project = await Project.findById(projectid).populate('issue');
 
     if(!project){
       return res.status(404).json({error:'Project not found'});
@@ -105,4 +105,24 @@ try{
 }catch(err){
   console.log(`Error in creating Issue: ${err}`);
 }
+}
+
+module.exports.deleteproject = async function(req,res){
+
+ const projectid = req.query.id;
+
+ const project = await Project.findById(projectid);
+
+  await Issue.deleteMany(
+    {project_id: projectid}
+  )
+  await Project.findByIdAndDelete({_id:projectid});
+
+  if(!project){
+    return res.status(404).json({ message: 'Project not found' });
+  }
+
+
+  return res.redirect('/');
+
 }

@@ -13,5 +13,7 @@ router.get('/createissue', projectcontroller.createissue);
 
 router.post('/newbug', projectcontroller.newIssue);
 
+router.get('/deleteproject', projectcontroller.deleteproject);
+
 
 module.exports = router;

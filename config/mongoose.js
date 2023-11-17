@@ -1,6 +1,8 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 
-mongoose.connect(`mongodb://127.0.0.1/Issue-tracker`);
+mongoose.connect(process.env.mongodb);
 
 const db = mongoose.connection;
 

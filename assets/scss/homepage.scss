@@ -8,6 +8,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+     
     }
     li{
         margin: 20px 5px 20px 5px;
@@ -19,11 +20,23 @@
         width: 50%;
         min-height: 15vh;
         color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    li:hover{      
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 10px 3px grey;
+
+        #deletebtn{
+            width:5%;
+            left: 330px;
+            bottom: 89px;
+            position: relative;
+        }
           
     }
+
+                
+    li:hover{      
+        transform: scale(1.05);
+        transition: transform 0.6s ease-in-out;
+
+
         #projectname{
             h1{
             margin-top: 2px;
