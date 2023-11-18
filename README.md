@@ -1,4 +1,5 @@
-#issue-tracker: A full stack app, which helps to track issues/bugs for the Project. 
+# issue-tracker
+A full stack app, which helps to track issues/bugs for the Project. 
 
 Hoisted Link:https://issue-tracker-a6xo.onrender.com
 
