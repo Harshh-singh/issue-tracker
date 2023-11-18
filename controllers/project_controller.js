@@ -11,6 +11,7 @@ module.exports.create = async function(req,res){
 
 module.exports.newproject = async function(req,res){
 
+
   try{
     let newProject = await Project.create({
        projectName: req.body.projectName,
@@ -18,6 +19,8 @@ module.exports.newproject = async function(req,res){
        authorName: req.body.author,
        issue: req.body.issue
     });
+
+    //in this we have used jquery to get from data for project and add that project to dom
 
     if(req.xhr){
       return res.status(200).json({
@@ -29,13 +32,12 @@ module.exports.newproject = async function(req,res){
 
     }
 
-    
-
   }catch(err){
     console.log(`Error in creating project: ${err}`);
   }
 
 }
+
 
 module.exports.details = async function(req,res){
 
@@ -43,6 +45,7 @@ module.exports.details = async function(req,res){
 
     const projectid = req.query.id;
 
+    //find the project from id and populate issues that we will add later
     const project = await Project.findById(projectid).populate('issue');
 
     if(!project){
@@ -60,6 +63,7 @@ module.exports.details = async function(req,res){
     return res.status(500).json({error: 'An error occurred while retrieving project details'})
   }
 }
+
 
 module.exports.createissue = async function(req,res){
 
@@ -87,7 +91,7 @@ try{
   //updating the project to add issue
 
 
-  //search for the project and update it
+  //search for the project and update it by adding newissue to it
   const project = await Project.findOneAndUpdate(
 
     {_id: projectId},
@@ -99,7 +103,7 @@ try{
   if(!project){
     return res.status(404).json({ message: 'Project not found' });
   }
-
+  //now redirect to that project details in which we are adding issue
   return res.redirect(`/project/details/?id=${projectId}&type=Get`);
 
 }catch(err){
@@ -107,15 +111,20 @@ try{
 }
 }
 
+  //we also added this feature to delete the project 
 module.exports.deleteproject = async function(req,res){
 
  const projectid = req.query.id;
 
+ //find the project with id 
  const project = await Project.findById(projectid);
 
+ //first delete all the issued related to this project by giving project id related to that issue
   await Issue.deleteMany(
     {project_id: projectid}
   )
+
+  //now delete that project
   await Project.findByIdAndDelete({_id:projectid});
 
   if(!project){

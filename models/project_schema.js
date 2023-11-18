@@ -13,6 +13,7 @@ const projectschema = new mongoose.Schema({
         type: String,
         required: true
     },
+    //add array of issues to project so that we can add multiple issues
     issue: [ {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Issue',

@@ -9,6 +9,7 @@ console.log('router loaded');
 
 router.get('/', homepage.home);
 
+//when any req comes as /project we use project.js route
 router.use('/project', require('./project'));
 
 module.exports = router;

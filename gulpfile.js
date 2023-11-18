@@ -4,6 +4,8 @@ const path = require('path');
 const fs = require('fs');
 const flatten = require('gulp-flatten');
 
+//use this gulp task to conver our scss to css
+
 //specify source and destination dir
 const sourceDir = './assets/scss';
 const destinationDir = path.resolve('./assets/css')
@@ -29,3 +31,5 @@ function watchTask(){
 }
 
 exports.default = series(buildStyles, watchTask);
+
+//when we run gulp in terminal it converts our scss files into css
