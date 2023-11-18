@@ -16,11 +16,8 @@
     "express-ejs-layouts": "^2.5.1",
     "gulp-flatten": "^0.4.0",
     "gulp-rename": "^2.0.0",
-<<<<<<< HEAD
     "mongoose": "^6.10.1",
-=======
     "mongoose": "^6.0.0",
->>>>>>> 0909e63f81f6d0c263fc049f5de544711be2feda
     "node": "^21.1.0"
   },
   "devDependencies": {

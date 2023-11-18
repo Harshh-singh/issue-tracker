@@ -13,7 +13,7 @@
 
             <div id="bugs">
 
-  //check for the issue array in project if its length is not 0 that means project has issue 
+  <!-- check for the issue array in project if its length is not 0 that means project has issue  -->
                 <% if(project_details.issue && project_details.issue.length>0) {%>
                     
                     <h2>
@@ -22,7 +22,7 @@
                     </h2>
                     <div id="bug-details">
         
-    //iterate over the issue array of that project to show all issues related to it
+    <!-- iterate over the issue array of that project to show all issues related to it -->
                         <% for(let bug of project_details.issue){%>
                             
                             
@@ -44,7 +44,7 @@
                          
                            
                     </div>
-    //if issue array has no element print no bugs
+    <!-- if issue array has no element print no bugs -->
                     <% }else{ %>
                         
                         <h1>
@@ -58,7 +58,7 @@
         
             </div>
    
-    //create issue button
+    <!-- create issue button -->
     <div id="createissuebtn">
         <a href="/project/createissue/?id=<%= project_id %>&type=Get">
             <div>
